@@ -1,0 +1,80 @@
+@import "reset";
+@import "fn";
+
+html,body{
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+
+    .header{
+        width: 100%;
+        height: 60px;
+        line-height: 60px;
+
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 10;
+
+        background: $primary-color;
+
+        .list{
+            @include clearfix();
+            li{
+                float: left;
+
+                margin-left: 20px;
+                cursor: pointer;
+                color: #10001a;
+
+                &:hover{
+                    color: $accent-color;
+                }
+
+            }
+        }
+    }
+
+    .nav{
+        position: fixed;
+        right: 20px;
+        top: 50%;
+        margin-top: -55px;
+        z-index: 10;
+        height: 200px;
+
+        li{
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: #79bc29;
+
+            margin-top: 15px;
+
+            cursor: pointer;
+
+            &.current{
+                width: 20px;
+                height: 20px;
+                margin-left: -3px;
+            }
+        }
+    }
+
+    .content{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 9;
+        margin-top: 60px;
+
+        .page{
+            height: 100%;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+        }
+    }
+}

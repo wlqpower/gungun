@@ -1,0 +1,107 @@
+html {
+  color: #000;
+  background: #fff; }
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, footer, article, aside, header, section, nav, figure, figcaption, hgroup {
+  margin: 0;
+  padding: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+fieldset, img {
+  border: 0; }
+
+address, caption, cite, code, dfn, em, strong, th, var {
+  font-style: normal;
+  font-weight: normal; }
+
+ol, ul {
+  list-style: none; }
+
+caption, th {
+  text-align: left; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+q:before, q:after {
+  content: ''; }
+
+abbr, acronym {
+  border: 0;
+  font-variant: normal; }
+
+sup {
+  vertical-align: text-top; }
+
+sub {
+  vertical-align: text-bottom; }
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  *font-size: 100%; }
+
+legend {
+  color: #000; }
+
+#yui3-css-stamp.cssreset {
+  display: none; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden; }
+  html .header, body .header {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    background: #3F51B5; }
+    html .header .list, body .header .list {
+      overflow: hidden; }
+      html .header .list li, body .header .list li {
+        float: left;
+        margin-left: 20px;
+        cursor: pointer;
+        color: #10001a; }
+        html .header .list li:hover, body .header .list li:hover {
+          color: #009688; }
+  html .nav, body .nav {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    margin-top: -55px;
+    z-index: 10;
+    height: 200px; }
+    html .nav li, body .nav li {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: #79bc29;
+      margin-top: 15px;
+      cursor: pointer; }
+      html .nav li.current, body .nav li.current {
+        width: 20px;
+        height: 20px;
+        margin-left: -3px; }
+  html .content, body .content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 9;
+    margin-top: 60px; }
+    html .content .page, body .content .page {
+      height: 100%;
+      box-sizing: border-box;
+      position: relative;
+      overflow: hidden; }
