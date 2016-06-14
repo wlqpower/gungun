@@ -1,20 +1,20 @@
 var gulp = require("gulp"),
     sass = require("gulp-sass"),
     autoprefix = require("gulp-autoprefixer"),
-    browserSync = require("browser-sync"),
+    browserSync = require("browser-sync");
     rev = require("gulp-rev"),
     revCollector = require("gulp-rev-collector");
 
 gulp.task("browser-sync",["sass","build","js"],function(){
     browserSync({
         server:{
-            baseDir: 'dis'
+            baseDir: 'dis/'
         }
     });
 });
 
 gulp.task("build",function(){
-    gulp.src(["*.html"])
+    gulp.src("src/*.html")
         .pipe(gulp.dest("dis/"));
 });
 
@@ -33,8 +33,8 @@ gulp.task("sass",function(){
 gulp.task("rev",function(){
     return gulp.src(["dis/**/*.json","src/*.html"])
         .pipe(revCollector())
-        .pipe(gulp.dest("dis"))
-})
+        .pipe(gulp.dest("dis/"))
+});
 
 gulp.task("img",function(){
     gulp.src("src/img/*")
@@ -54,7 +54,8 @@ gulp.task("watch",function(){
     gulp.watch("src/scss/*.scss",["sass"]);
     gulp.watch("src/js/*.js",["js"]);
     gulp.watch("src/img/*",["img"]);
-    gulp.watch(['**/*.html'],['rebuild']);
+    gulp.watch("**/*.html",['rebuild']);
+    gulp.watch("src/*.html",["build"]);
 });
 
 gulp.task("default",["browser-sync","img","js","rev","watch"]);
