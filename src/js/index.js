@@ -5,6 +5,7 @@ $(function(){
         // navList: ".nav",
         // navListItem: ".nav li"
     })
+
 })
 
 function MouseScroll(o){

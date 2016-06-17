@@ -18,6 +18,7 @@ html,body{
 
         background: $primary-color;
 
+
         .list{
             @include clearfix();
             li{
